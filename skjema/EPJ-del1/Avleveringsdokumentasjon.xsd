@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema 
+	targetNamespace="http://http://www.arkivverket.no/standarder/nha/ArkDbOpplysninger/Avleveringsdokumentasjon" 
+	xmlns="http://http://www.arkivverket.no/standarder/nha/ArkDbOpplysninger/Avleveringsdokumentasjon" 
+	xmlns:avleveringsdokumentasjon="http://http://www.arkivverket.no/standarder/nha/ArkDbOpplysninger/Avleveringsdokumentasjon" 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="Avleveringsdokumentasjon">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="avleveringsdokumentasjon:Oppdateringsinfo" minOccurs="1" maxOccurs="1">
+				</xs:element>
+				<xs:element ref="avleveringsdokumentasjon:Avleveringsbeskrivelse" minOccurs="1" maxOccurs="1">
+				</xs:element>
+				<xs:element ref="avleveringsdokumentasjon:OverforingTilArkivdepot" minOccurs="0" maxOccurs="1">
+				</xs:element>
+				<xs:element ref="avleveringsdokumentasjon:Avleveringsoversikt" minOccurs="0" maxOccurs="unbounded">
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Oppdateringsinfo">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="sist_oppdatert" type="xs:dateTime" minOccurs="1" maxOccurs="1">
+				</xs:element>
+				<xs:element name="oppdatert_av" type="xs:string" minOccurs="1" maxOccurs="1">
+				</xs:element>
+				<xs:element name="prosesstrinn" type="xs:string" minOccurs="1" maxOccurs="1">
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Avleveringsoversikt">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="pasientId" type="xs:string" minOccurs="1" maxOccurs="1">
+				</xs:element>
+				<xs:element name="pasientIdType" type="xs:string" minOccurs="1" maxOccurs="1">
+				</xs:element>
+				<xs:element name="arkivId" type="xs:string" minOccurs="1" maxOccurs="1">
+				</xs:element>
+				<xs:element name="avleveringsidentifikator" type="xs:string" minOccurs="1" maxOccurs="1">
+				</xs:element>
+				<xs:element name="katalogForArkivuttrekk" type="xs:string" minOccurs="1" maxOccurs="1">
+				</xs:element>
+				<xs:element name="fdato" type="xs:date" minOccurs="0" maxOccurs="1">
+				</xs:element>
+				<xs:element name="morsdato" type="xs:date" minOccurs="0" maxOccurs="1">
+				</xs:element>
+				<xs:element name="tillegg" type="xs:string" minOccurs="0" maxOccurs="1">
+				</xs:element>
+				<xs:element name="uttrekkstidspunkt" type="xs:dateTime" minOccurs="0" maxOccurs="1">
+				</xs:element>
+				<xs:element name="kvalitetssikretDato" type="xs:date" minOccurs="0" maxOccurs="1">
+				</xs:element>
+				<xs:element name="overfortDato" type="xs:date" minOccurs="0" maxOccurs="1">
+				</xs:element>
+				<xs:element name="kvitteringMottattDato" type="xs:date" minOccurs="0" maxOccurs="1">
+				</xs:element>
+				<xs:element name="statusFraArkivdepot" type="xs:string" minOccurs="0" maxOccurs="1">
+				</xs:element>
+				<xs:element name="tilbakemeldingFraArkivdepot" type="xs:string" minOccurs="0" maxOccurs="1">
+				</xs:element>
+				<xs:element name="datoGodtattAvArkivdepot" type="xs:string" minOccurs="0" maxOccurs="1">
+				</xs:element>
+				<xs:element name="datoForkastetAvArkivdepot" type="xs:date" minOccurs="0" maxOccurs="1">
+				</xs:element>
+				<xs:element name="tidspunktSlettetFraSystem" type="xs:dateTime" minOccurs="0" maxOccurs="1">
+				</xs:element>
+				<xs:element name="referanseTilEPJiSystem" type="xs:string" minOccurs="0" maxOccurs="1">
+				</xs:element>
+				<xs:element name="leverandørspesifikkReferanse" type="xs:string" minOccurs="0" maxOccurs="1">
+				</xs:element>
+				<xs:element ref="avleveringsdokumentasjon:OverfortTilNyAvlevering" minOccurs="0" maxOccurs="1">
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Avleveringsbeskrivelse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="avtaleidentifikator" type="xs:string" minOccurs="1" maxOccurs="1">
+				</xs:element>
+				<xs:element name="avleveringsidentifikator" type="xs:string" minOccurs="1" maxOccurs="1">
+				</xs:element>
+				<xs:element name="arkivdepotId" type="xs:string" minOccurs="1" maxOccurs="1">
+				</xs:element>
+				<xs:element name="arkivskaperId" type="xs:string" minOccurs="1" maxOccurs="1">
+				</xs:element>
+				<xs:element name="arkivId" type="xs:string" minOccurs="1" maxOccurs="1">
+				</xs:element>
+				<xs:element name="avtaledato" type="xs:date" minOccurs="1" maxOccurs="1">
+				</xs:element>
+				<xs:element name="datoPasientutvelgelse" type="xs:date" minOccurs="1" maxOccurs="1">
+				</xs:element>
+				<xs:element name="PlanlagtOppstart" type="xs:date" minOccurs="1" maxOccurs="1">
+				</xs:element>
+				<xs:element name="PlanlagtAvsluttet" type="xs:date" minOccurs="1" maxOccurs="1">
+				</xs:element>
+				<xs:element name="RotkatalogArkivuttrekk" type="xs:string" minOccurs="1" maxOccurs="1">
+				</xs:element>
+				<xs:element name="ikkeKompl" type="xs:string" minOccurs="0" maxOccurs="1">
+				</xs:element>
+				<xs:element name="UtfyllendeOpplysninger" type="xs:string" minOccurs="0" maxOccurs="1">
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="OverforingTilArkivdepot">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="overfortDato" type="xs:date" minOccurs="1" maxOccurs="1">
+				</xs:element>
+				<xs:element name="antallPasienterOverført" type="xs:integer" minOccurs="1" maxOccurs="1">
+				</xs:element>
+				<xs:element name="antallSakstypebeskrivelserOverfort" type="xs:integer" minOccurs="1" maxOccurs="1">
+				</xs:element>
+				<xs:element name="antallDokumenttypebeskrivelserOverfort" type="xs:integer" minOccurs="1" maxOccurs="1">
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="OverfortTilNyAvlevering">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="datoOverfortTilNyAvleveringsoversikt" type="xs:date" minOccurs="1" maxOccurs="1">
+				</xs:element>
+				<xs:element name="nyAvleveringsidentifikator" type="xs:string" minOccurs="1" maxOccurs="1">
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

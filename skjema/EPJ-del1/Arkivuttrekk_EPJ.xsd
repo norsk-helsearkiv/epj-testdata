@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema
+	targetNamespace="http://http://www.arkivverket.no/standarder/nha/ArkDbOpplysninger/Arkivuttrekk_EPJ"
+	xmlns="http://http://www.arkivverket.no/standarder/nha/ArkDbOpplysninger/Arkivuttrekk_EPJ"
+	xmlns:arkivuttrekk_EPJ="http://http://www.arkivverket.no/standarder/nha/ArkDbOpplysninger/Arkivuttrekk_EPJ"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:arkivuttrekk_felles="http://http://www.arkivverket.no/standarder/nha/ArkDbOpplysninger/Arkivuttrekk_felles"
+	xmlns:datatyper_arkivuttrekk="http://http://www.arkivverket.no/standarder/nha/ArkDbOpplysninger/Datatyper_arkivuttrekk"
+	elementFormDefault="qualified">
+	<xs:import
+		namespace="http://http://www.arkivverket.no/standarder/nha/ArkDbOpplysninger/Arkivuttrekk_felles"
+		schemaLocation="Arkivuttrekk_felles.xsd"/>
+	<xs:import
+		namespace="http://http://www.arkivverket.no/standarder/nha/ArkDbOpplysninger/Datatyper_arkivuttrekk"
+		schemaLocation="Datatyper_arkivuttrekk.xsd"/>
+	<xs:element name="ArkivertEpj">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="epjId" type="xs:string" minOccurs="1" maxOccurs="1"> </xs:element>
+				<xs:element name="refPasInfo" type="xs:anyURI" minOccurs="1" maxOccurs="1"> </xs:element>
+				<xs:element ref="arkivuttrekk_EPJ:ArkEpjSak" minOccurs="1" maxOccurs="unbounded"> </xs:element>
+				<xs:element ref="arkivuttrekk_EPJ:Virksomhet" minOccurs="1" maxOccurs="1"> </xs:element>
+				<xs:element ref="arkivuttrekk_EPJ:OrgEnh" minOccurs="0" maxOccurs="1"> </xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ArkEpjSak">
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="arkivuttrekk_felles:ArkStrukkomp">
+					<xs:sequence>
+						<xs:element name="tittel" type="xs:string" minOccurs="1" maxOccurs="1"> </xs:element>
+						<xs:element name="tillegg" type="xs:string" minOccurs="0" maxOccurs="1"> </xs:element>
+						<xs:element ref="arkivuttrekk_EPJ:ArkEpjSak" minOccurs="0" maxOccurs="unbounded"> </xs:element>
+						<xs:element ref="arkivuttrekk_EPJ:RefArkDok" minOccurs="0" maxOccurs="unbounded"> </xs:element>
+						<xs:element ref="arkivuttrekk_felles:ArkRevInf" minOccurs="0" maxOccurs="unbounded"
+						> </xs:element>
+					</xs:sequence>
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="RefArkDok">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="sort" type="xs:integer" minOccurs="0" maxOccurs="1"> </xs:element>
+				<xs:element name="filRef" type="xs:anyURI" minOccurs="1" maxOccurs="1"> </xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Virksomhet">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="navn" type="xs:string" minOccurs="1" maxOccurs="1"> </xs:element>
+				<xs:element name="orgNr" type="xs:string" minOccurs="0" maxOccurs="1"> </xs:element>
+				<xs:element name="virkType" type="datatyper_arkivuttrekk:arkCV" minOccurs="0" maxOccurs="1"> </xs:element>
+				<xs:element name="HerId" type="xs:string" minOccurs="0" maxOccurs="1"> </xs:element>
+				<xs:element name="ReshId" type="xs:string" minOccurs="0" maxOccurs="1"> </xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="OrgEnh">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="enhbet" type="xs:string" minOccurs="1" maxOccurs="1"> </xs:element>
+				<xs:element name="tilhVirk" type="xs:string" minOccurs="0" maxOccurs="1"> </xs:element>
+				<xs:element name="enhType" type="datatyper_arkivuttrekk:arkCV" minOccurs="0" maxOccurs="1"> </xs:element>
+				<xs:element name="HerId" type="xs:string" minOccurs="0" maxOccurs="1"> </xs:element>
+				<xs:element name="ReshId" type="xs:string" minOccurs="0" maxOccurs="1"> </xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

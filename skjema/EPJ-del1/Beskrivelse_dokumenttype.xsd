@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema 
+	targetNamespace="http://http://www.arkivverket.no/standarder/nha/ArkDbOpplysninger/Beskrivelse_dokumenttype" 
+	xmlns="http://http://www.arkivverket.no/standarder/nha/ArkDbOpplysninger/Beskrivelse_dokumenttype" 
+	xmlns:beskrivelse_dokumenttype="http://http://www.arkivverket.no/standarder/nha/ArkDbOpplysninger/Beskrivelse_dokumenttype" 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	xmlns:datatyper_arkivuttrekk="http://http://www.arkivverket.no/standarder/nha/ArkDbOpplysninger/Datatyper_arkivuttrekk">
+	<xs:import namespace="http://http://www.arkivverket.no/standarder/nha/ArkDbOpplysninger/Datatyper_arkivuttrekk" schemaLocation="Datatyper_arkivuttrekk.xsd"/>
+	<xs:element name="BeskrArkEpjDokType">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="kompType" type="xs:string" minOccurs="1" maxOccurs="1">
+				</xs:element>
+				<xs:element name="betKompoType" type="xs:string" minOccurs="1" maxOccurs="1">
+				</xs:element>
+				<xs:element name="dok" type="xs:string" minOccurs="0" maxOccurs="1">
+				</xs:element>
+				<xs:element name="infoKati" type="datatyper_arkivuttrekk:arkCV" minOccurs="0" maxOccurs="1">
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

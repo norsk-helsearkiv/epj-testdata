@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema 
+	targetNamespace="http://http://www.arkivverket.no/standarder/nha/ArkDbOpplysninger/Pasientinfo" 
+	xmlns="http://http://www.arkivverket.no/standarder/nha/ArkDbOpplysninger/Pasientinfo" 
+	xmlns:pasientinfo="http://http://www.arkivverket.no/standarder/nha/ArkDbOpplysninger/Pasientinfo" 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	xmlns:datatyper_arkivuttrekk="http://http://www.arkivverket.no/standarder/nha/ArkDbOpplysninger/Datatyper_arkivuttrekk"
+	elementFormDefault="qualified">
+	<xs:import namespace="http://http://www.arkivverket.no/standarder/nha/ArkDbOpplysninger/Datatyper_arkivuttrekk" schemaLocation="Datatyper_arkivuttrekk.xsd"/>
+	<xs:element name="Pasientpersonalia">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="pasientinfo:ArkPasInfo" minOccurs="1" maxOccurs="1">
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ArkPasInfo">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="pasKompId" type="xs:string" minOccurs="0" maxOccurs="1">
+				</xs:element>
+				<xs:element name="persKompId" type="xs:string" minOccurs="0" maxOccurs="1">
+				</xs:element>
+				<xs:element name="pasId" type="xs:string" minOccurs="1" maxOccurs="1">
+				</xs:element>
+				<xs:element name="pasIdType" type="xs:string" minOccurs="1" maxOccurs="1">
+				</xs:element>
+				<xs:element name="fDato" type="xs:date" minOccurs="0" maxOccurs="1">
+				</xs:element>
+				<xs:element name="antFAr" type="xs:gYear" minOccurs="0" maxOccurs="1">
+				</xs:element>
+				<xs:element name="morsdato" type="xs:date" minOccurs="0" maxOccurs="1">
+				</xs:element>
+				<xs:element name="ukjIdent" type="xs:boolean" minOccurs="0" maxOccurs="1">
+				</xs:element>
+				<xs:element name="fRegPast" type="xs:date" minOccurs="0" maxOccurs="1">
+				</xs:element>
+				<xs:element name="sRegJourl" type="xs:date" minOccurs="0" maxOccurs="1">
+				</xs:element>
+				<xs:element name="hemAdr" type="xs:boolean" minOccurs="0" maxOccurs="1">
+				</xs:element>
+				<xs:element name="hemNavn" type="xs:boolean" minOccurs="0" maxOccurs="1">
+				</xs:element>
+				<xs:element name="kjonn" type="datatyper_arkivuttrekk:arkCV" minOccurs="0" maxOccurs="1">
+				</xs:element>
+				<xs:element ref="pasientinfo:ArkSekPersIdPas" minOccurs="0" maxOccurs="unbounded">
+				</xs:element>
+				<xs:element ref="pasientinfo:ArkPersAdr" minOccurs="0" maxOccurs="unbounded">
+				</xs:element>
+				<xs:element ref="pasientinfo:ArkPersNavn" minOccurs="1" maxOccurs="unbounded">
+				</xs:element>
+				<xs:element ref="pasientinfo:ArkStilling" minOccurs="0" maxOccurs="unbounded">
+				</xs:element>
+				<xs:element ref="pasientinfo:ArkHjemstavn" minOccurs="0" maxOccurs="unbounded">
+				</xs:element>
+				<xs:element ref="pasientinfo:ArkTidlPasId" minOccurs="0" maxOccurs="unbounded">
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ArkSekPersIdPas">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="sekPersId" type="xs:string" minOccurs="0" maxOccurs="1">
+				</xs:element>
+				<xs:element name="land" type="datatyper_arkivuttrekk:arkCV" minOccurs="0" maxOccurs="1">
+				</xs:element>
+				<xs:element name="merk" type="xs:string" minOccurs="0" maxOccurs="1">
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ArkPersAdr">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="adr" type="xs:string" minOccurs="1" maxOccurs="1">
+				</xs:element>
+				<xs:element name="adrType" type="datatyper_arkivuttrekk:arkCV" minOccurs="0" maxOccurs="1">
+				</xs:element>
+				<xs:element name="regDato" type="xs:date" minOccurs="0" maxOccurs="1">
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ArkPersNavn">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="fulltNavn" type="xs:string" minOccurs="1" maxOccurs="1">
+				</xs:element>
+				<xs:element name="fNavn" type="xs:string" minOccurs="0" maxOccurs="1">
+				</xs:element>
+				<xs:element name="mNavn" type="xs:string" minOccurs="0" maxOccurs="1">
+				</xs:element>
+				<xs:element name="eNavn" type="xs:string" minOccurs="0" maxOccurs="1">
+				</xs:element>
+				<xs:element name="typeNavn" type="datatyper_arkivuttrekk:arkCV" minOccurs="0" maxOccurs="1">
+				</xs:element>
+				<xs:element name="regDato" type="xs:date" minOccurs="0" maxOccurs="1">
+				</xs:element>
+				<xs:element name="merk" type="xs:string" minOccurs="0" maxOccurs="1">
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ArkStilling">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="stillBet" type="xs:string" minOccurs="1" maxOccurs="1">
+				</xs:element>
+				<xs:element name="yrkeskode" type="datatyper_arkivuttrekk:arkCV" minOccurs="0" maxOccurs="1">
+				</xs:element>
+				<xs:element name="regDato" type="xs:date" minOccurs="0" maxOccurs="1">
+				</xs:element>
+				<xs:element name="merk" type="xs:string" minOccurs="0" maxOccurs="1">
+				</xs:element>
+				<xs:element ref="pasientinfo:ArbGiver" minOccurs="0" maxOccurs="1">
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ArkHjemstavn">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="kommune" type="datatyper_arkivuttrekk:arkCV" minOccurs="0" maxOccurs="1">
+				</xs:element>
+				<xs:element name="nasjon" type="datatyper_arkivuttrekk:arkCV" minOccurs="0" maxOccurs="1">
+				</xs:element>
+				<xs:element name="regDato" type="xs:date" minOccurs="0" maxOccurs="1">
+				</xs:element>
+				<xs:element name="merk" type="xs:string" minOccurs="0" maxOccurs="1">
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ArbGiver">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="virksomhet" type="xs:string" minOccurs="0" maxOccurs="1">
+				</xs:element>
+				<xs:element name="virkType" type="datatyper_arkivuttrekk:arkCV" minOccurs="0" maxOccurs="1">
+				</xs:element>
+				<xs:element name="orgNr" type="xs:string" minOccurs="0" maxOccurs="1">
+				</xs:element>
+				<xs:element name="enhBet" type="xs:string" minOccurs="0" maxOccurs="1">
+				</xs:element>
+				<xs:element name="enhType" type="datatyper_arkivuttrekk:arkCV" minOccurs="0" maxOccurs="1">
+				</xs:element>
+				<xs:element name="HerId" type="xs:string" minOccurs="0" maxOccurs="1">
+				</xs:element>
+				<xs:element name="ReshId" type="xs:string" minOccurs="0" maxOccurs="1">
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ArkTidlPasId">
+		<xs:complexType>
+			<xs:annotation>
+				<xs:documentation>
+					Dersom pasienten tidligere har hatt annen identifikator fordi man f.eks har fått et nytt fødselsnummer. så registreres dette her
+				</xs:documentation>
+			</xs:annotation>
+			<xs:sequence>
+				<xs:element name="pasId" type="xs:string" minOccurs="0" maxOccurs="1">
+				</xs:element>
+				<xs:element name="pasIdType" type="xs:string" minOccurs="1" maxOccurs="1">
+				</xs:element>
+				<xs:element name="tilDato" type="xs:date" minOccurs="0" maxOccurs="1">
+				</xs:element>
+				<xs:element name="merk" type="xs:string" minOccurs="0" maxOccurs="1">
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

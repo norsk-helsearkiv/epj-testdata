@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema 
+	targetNamespace="http://http://www.arkivverket.no/standarder/nha/ArkDbOpplysninger/Beskrivelse_sakstype" 
+	xmlns="http://http://www.arkivverket.no/standarder/nha/ArkDbOpplysninger/Beskrivelse_sakstype" 
+	xmlns:beskrivelse_sakstype="http://http://www.arkivverket.no/standarder/nha/ArkDbOpplysninger/Beskrivelse_sakstype" 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="BeskrArkEpjSakType">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="kompType" type="xs:string" minOccurs="1" maxOccurs="1">
+				</xs:element>
+				<xs:element name="betKompType" type="xs:string" minOccurs="1" maxOccurs="1">
+				</xs:element>
+				<xs:element name="dok" type="xs:string" minOccurs="0" maxOccurs="1">
+				</xs:element>
+				<xs:element name="alletyperSak" type="xs:boolean" minOccurs="1" maxOccurs="1">
+				</xs:element>
+				<xs:element name="alletyperDok" type="xs:boolean" minOccurs="1" maxOccurs="1">
+				</xs:element>
+				<xs:element ref="beskrivelse_sakstype:InklArkEpjDokType" minOccurs="0" maxOccurs="unbounded">
+				</xs:element>
+				<xs:element ref="beskrivelse_sakstype:InklArkEpjSakstype" minOccurs="0" maxOccurs="unbounded">
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="InklArkEpjDokType">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="inklKompType" type="xs:string" minOccurs="1" maxOccurs="1">
+				</xs:element>
+				<xs:element name="minAnt" type="xs:integer" minOccurs="0" maxOccurs="1">
+				</xs:element>
+				<xs:element name="maksAnt" type="xs:integer" minOccurs="0" maxOccurs="1">
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="InklArkEpjSakstype">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="inklKompType" type="xs:string" minOccurs="1" maxOccurs="1">
+				</xs:element>
+				<xs:element name="minAntl" type="xs:integer" minOccurs="0" maxOccurs="1">
+				</xs:element>
+				<xs:element name="maksAnt" type="xs:integer" minOccurs="0" maxOccurs="1">
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

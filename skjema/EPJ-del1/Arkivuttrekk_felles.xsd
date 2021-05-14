@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema 
+	targetNamespace="http://http://www.arkivverket.no/standarder/nha/ArkDbOpplysninger/Arkivuttrekk_felles" 
+	xmlns="http://http://www.arkivverket.no/standarder/nha/ArkDbOpplysninger/Arkivuttrekk_felles" 
+	xmlns:arkivuttrekk_felles="http://http://www.arkivverket.no/standarder/nha/ArkDbOpplysninger/Arkivuttrekk_felles" 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	xmlns:datatyper_arkivuttrekk="http://http://www.arkivverket.no/standarder/nha/ArkDbOpplysninger/Datatyper_arkivuttrekk" 
+	xmlns:pasientinfo="http://http://www.arkivverket.no/standarder/nha/ArkDbOpplysninger/Pasientinfo">
+	<xs:import namespace="http://http://www.arkivverket.no/standarder/nha/ArkDbOpplysninger/Datatyper_arkivuttrekk" schemaLocation="Datatyper_arkivuttrekk.xsd"/>
+	<xs:import namespace="http://http://www.arkivverket.no/standarder/nha/ArkDbOpplysninger/Pasientinfo" schemaLocation="Pasientinfo.xsd"/>
+	<xs:complexType name="ArkStrukkomp" abstract="true">
+		<xs:sequence>
+			<xs:element name="kompId" type="xs:string" minOccurs="1" maxOccurs="1">
+			</xs:element>
+			<xs:element name="kompType" type="xs:string" minOccurs="1" maxOccurs="1">
+			</xs:element>
+			<xs:element name="sort" type="xs:integer" minOccurs="0" maxOccurs="1">
+			</xs:element>
+			<xs:element ref="arkivuttrekk_felles:ArkLink" minOccurs="0" maxOccurs="unbounded">
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="ArkRevInf">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="reviTid" type="xs:dateTime" minOccurs="1" maxOccurs="1">
+				</xs:element>
+				<xs:element name="reviType" type="datatyper_arkivuttrekk:arkCV" minOccurs="1" maxOccurs="1">
+				</xs:element>
+				<xs:element name="regRev" type="xs:integer" minOccurs="0" maxOccurs="1">
+				</xs:element>
+				<xs:element name="kompHend" type="datatyper_arkivuttrekk:arkCV" minOccurs="0" maxOccurs="1">
+				</xs:element>
+				<xs:element name="merk" type="xs:string" minOccurs="0" maxOccurs="1">
+				</xs:element>
+				<xs:element ref="arkivuttrekk_felles:RegAvPerson" minOccurs="0" maxOccurs="1">
+				</xs:element>
+				<xs:element ref="arkivuttrekk_felles:SignAvPerson" minOccurs="0" maxOccurs="1">
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="Person" abstract="true">
+		<xs:sequence>
+			<xs:element name="fulltNavn" type="xs:string" minOccurs="1" maxOccurs="1">
+			</xs:element>
+			<xs:element name="stillbet" type="xs:string" minOccurs="0" maxOccurs="1">
+			</xs:element>
+			<xs:element ref="pasientinfo:ArbGiver" minOccurs="0" maxOccurs="1">
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="ArkLink">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="linkTilKomp" type="xs:string" minOccurs="1" maxOccurs="1">
+				</xs:element>
+				<xs:element name="linkFraKomp" type="xs:string" minOccurs="0" maxOccurs="1">
+				</xs:element>
+				<xs:element name="linkStyrke" type="datatyper_arkivuttrekk:arkCV" minOccurs="1" maxOccurs="1">
+				</xs:element>
+				<xs:element name="linkType" type="datatyper_arkivuttrekk:arkCV" minOccurs="0" maxOccurs="1">
+				</xs:element>
+				<xs:element name="merk" type="xs:string" minOccurs="0" maxOccurs="1">
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SignAvPerson">
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="arkivuttrekk_felles:Person">
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="RegAvPerson">
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="arkivuttrekk_felles:Person">
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

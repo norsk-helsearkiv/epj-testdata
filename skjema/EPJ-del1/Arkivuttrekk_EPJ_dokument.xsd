@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema 
+	targetNamespace="http://http://www.arkivverket.no/standarder/nha/ArkDbOpplysninger/Arkivuttrekk_EPJ_dokument" 
+	xmlns="http://http://www.arkivverket.no/standarder/nha/ArkDbOpplysninger/Arkivuttrekk_EPJ_dokument" 
+	xmlns:arkivuttrekk_EPJ_dokument="http://http://www.arkivverket.no/standarder/nha/ArkDbOpplysninger/Arkivuttrekk_EPJ_dokument" 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	xmlns:arkivuttrekk_felles="http://http://www.arkivverket.no/standarder/nha/ArkDbOpplysninger/Arkivuttrekk_felles" 
+	xmlns:datatyper_arkivuttrekk="http://http://www.arkivverket.no/standarder/nha/ArkDbOpplysninger/Datatyper_arkivuttrekk">
+	<xs:import namespace="http://http://www.arkivverket.no/standarder/nha/ArkDbOpplysninger/Arkivuttrekk_felles" schemaLocation="Arkivuttrekk_felles.xsd"/>
+	<xs:import namespace="http://http://www.arkivverket.no/standarder/nha/ArkDbOpplysninger/Datatyper_arkivuttrekk" schemaLocation="Datatyper_arkivuttrekk.xsd"/>
+	<xs:element name="ArkEpjDok">
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="arkivuttrekk_felles:ArkStrukkomp">
+					<xs:sequence>
+						<xs:element ref="arkivuttrekk_felles:ArkRevInf" minOccurs="0" maxOccurs="unbounded">
+						</xs:element>
+						<xs:element ref="arkivuttrekk_EPJ_dokument:DokInnh" minOccurs="1" maxOccurs="unbounded">
+						</xs:element>
+					</xs:sequence>
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DokInnh">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="sort" type="xs:integer" minOccurs="0" maxOccurs="1">
+				</xs:element>
+				<xs:element name="filRef" type="xs:anyURI" minOccurs="1" maxOccurs="1">
+				</xs:element>
+				<xs:element name="filformat" type="xs:string" minOccurs="1" maxOccurs="1">
+				</xs:element>
+				<xs:element name="dokVar" type="datatyper_arkivuttrekk:arkCV" minOccurs="0" maxOccurs="1">
+				</xs:element>
+				<xs:element name="gyldigTil" type="xs:date" minOccurs="0" maxOccurs="1">
+				</xs:element>
+				<xs:element ref="arkivuttrekk_EPJ_dokument:TilleggDok" minOccurs="0" maxOccurs="unbounded">
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="TilleggDok">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="filRef" type="xs:anyURI" minOccurs="1" maxOccurs="1">
+				</xs:element>
+				<xs:element name="filformat" type="xs:string" minOccurs="1" maxOccurs="1">
+				</xs:element>
+				<xs:element name="typeTillegg" type="datatyper_arkivuttrekk:arkCV" minOccurs="0" maxOccurs="1">
+				</xs:element>
+				<xs:element name="regTid" type="xs:dateTime" minOccurs="0" maxOccurs="1">
+				</xs:element>
+				<xs:element ref="arkivuttrekk_felles:RegAvPerson" minOccurs="0" maxOccurs="1">
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
