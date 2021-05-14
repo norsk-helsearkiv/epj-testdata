@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://eisi.helsedir.no/anno2014/nha-epj-1.80/element/tiltaksref" xmlns:tiltaksref="http://eisi.helsedir.no/anno2014/nha-epj-1.80/element/tiltaksref" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tiltak="http://eisi.helsedir.no/anno2014/nha-epj-1.80/datatyper/tiltak" xmlns:stamme="http://eisi.helsedir.no/anno2014/nha-epj-1.80/datatyper/stamme" targetNamespace="http://eisi.helsedir.no/anno2014/nha-epj-1.80/element/tiltaksref" elementFormDefault="qualified">
+	<xs:import namespace="http://eisi.helsedir.no/anno2014/nha-epj-1.80/datatyper/tiltak" schemaLocation="datatyper.tiltak.xsd"/>
+	<xs:import namespace="http://eisi.helsedir.no/anno2014/nha-epj-1.80/datatyper/stamme" schemaLocation="datatyper.stamme.xsd"/>
+	<xs:complexType name="Arkivert_R_BT_dataelement___besluttet_tiltak">
+		<xs:complexContent>
+			<xs:extension base="stamme:Arkivert_dataelement">
+				<xs:sequence>
+					<xs:element name="arkivert_R_BT_elementverdi" type="tiltak:arkivert_R_BT_elementverdi" minOccurs="0" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Arkivert_R_TU_dataelement___tjenesteutførelse">
+		<xs:complexContent>
+			<xs:extension base="stamme:Arkivert_dataelement">
+				<xs:sequence>
+					<xs:element name="arkivert_R_BT_elementverdi" type="tiltak:arkivert_R_TU_elementverdi" minOccurs="0" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Arkivert_R_PAS_dataelement___pasient">
+		<xs:complexContent>
+			<xs:extension base="stamme:Arkivert_dataelement">
+				<xs:sequence>
+					<xs:element name="arkivert_R_PAS_elementverdi" type="tiltak:arkivert_R_PAS_elementverdi" minOccurs="0" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

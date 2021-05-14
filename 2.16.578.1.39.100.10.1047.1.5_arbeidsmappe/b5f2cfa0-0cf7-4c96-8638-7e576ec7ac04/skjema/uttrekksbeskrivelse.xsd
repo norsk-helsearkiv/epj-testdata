@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://eisi.helsedir.no/anno2014/nha-epj-1.80/uttrekksbeskrivelse" xmlns:uttrekksbeskrivelse="http://eisi.helsedir.no/anno2014/nha-epj-1.80/uttrekksbeskrivelse" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:basis="http://eisi.helsedir.no/anno2014/nha-epj-1.80/datatyper/basis" targetNamespace="http://eisi.helsedir.no/anno2014/nha-epj-1.80/uttrekksbeskrivelse" elementFormDefault="qualified">
+	<xs:import namespace="http://eisi.helsedir.no/anno2014/nha-epj-1.80/datatyper/basis" schemaLocation="datatyper.basis.xsd"/>
+	<xs:complexType name="informasjonskategori">
+		<xs:complexContent>
+			<xs:extension base="basis:CV"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="Beskrivelse_arkivert_EPJ_dokumenttype">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="komponenttype" type="xs:string" minOccurs="1" maxOccurs="1"/>
+				<xs:element name="betegnelse_komponenttype" type="xs:string" minOccurs="1" maxOccurs="1"/>
+				<xs:element name="dokumentasjon" type="xs:string" minOccurs="0" maxOccurs="1"/>
+				<xs:element name="informasjonskategori" type="uttrekksbeskrivelse:informasjonskategori" minOccurs="0" maxOccurs="1"/>
+				<xs:element name="Inkludert_arkivert_EPJ_fragmenttype" type="uttrekksbeskrivelse:Inkludert_arkivert_EPJ_fragmenttype" minOccurs="1" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="Inkludert_arkivert_EPJ_fragmenttype">
+		<xs:sequence>
+			<xs:element name="inkluder_komponenttype" type="xs:string" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="minimum_antall" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="maksimum_antall" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="Beskrivelse_arkivert_EPJ_fragmenttype" type="uttrekksbeskrivelse:Beskrivelse_arkivert_EPJ_fragmenttype" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Beskrivelse_arkivert_EPJ_fragmenttype">
+		<xs:sequence>
+			<xs:element name="komponenttype" type="xs:string" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="betegnelse_komponenttype" type="xs:string" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="dokumentasjon" type="xs:string" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="Inkludert_arkivert_dataelementtype" type="uttrekksbeskrivelse:Inkludert_arkivert_dataelementtype" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="Inkludert_arkivert_EPJ_fragmenttype" type="uttrekksbeskrivelse:Inkludert_arkivert_EPJ_fragmenttype" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Inkludert_arkivert_dataelementtype">
+		<xs:sequence>
+			<xs:element name="komponenttype" type="xs:string" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="betegnelse_komponenttype" type="xs:string" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="spesialisering_arkivert_dataelementtype" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="dokumentasjon" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="minimum_antall" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="maksimum_antall" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="Verdisett_arkivert_dataelementtype" type="uttrekksbeskrivelse:Verdisett_arkivert_dataelementtype" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Verdisett_arkivert_dataelementtype">
+		<xs:sequence>
+			<xs:element name="kodeverk" type="xs:string" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="Beskrivelse_arkivert_EPJ_sakstype">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="komponenttype" type="xs:string" minOccurs="1" maxOccurs="1"/>
+				<xs:element name="betegnelse_komponenttype" type="xs:string" minOccurs="1" maxOccurs="1"/>
+				<xs:element name="dokumentasjon" type="xs:string" minOccurs="0" maxOccurs="1"/>
+				<xs:element name="alle_typer_EPJ_sak_kan_inngå" type="xs:boolean" minOccurs="1" maxOccurs="1"/>
+				<xs:element name="alle_typer_EPJ_dokument_kan_inngå" type="xs:boolean" minOccurs="1" maxOccurs="1"/>
+				<xs:element name="Inkludert_arkivert_EPJ_dokumenttype" type="uttrekksbeskrivelse:Inkludert_arkivert_EPJ_dokumenttype" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="Inkludert_arkivert_EPJ_sakstype" type="uttrekksbeskrivelse:Inkludert_arkivert_EPJ_sakstype" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="Inkludert_arkivert_EPJ_dokumenttype">
+		<xs:sequence>
+			<xs:element name="inkluder_komponenttype" type="xs:string" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="minimum_antall" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="maksimum_antall" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Inkludert_arkivert_EPJ_sakstype">
+		<xs:sequence>
+			<xs:element name="inkluder_komponenttype" type="xs:string" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="minimum_antall" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="maksimum_antall" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

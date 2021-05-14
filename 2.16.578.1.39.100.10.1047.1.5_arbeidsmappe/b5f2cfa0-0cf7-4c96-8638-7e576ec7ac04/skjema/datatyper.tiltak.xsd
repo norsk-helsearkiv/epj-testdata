@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://eisi.helsedir.no/anno2014/nha-epj-1.80/datatyper/tiltak" xmlns:tiltak="http://eisi.helsedir.no/anno2014/nha-epj-1.80/datatyper/tiltak" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:basis="http://eisi.helsedir.no/anno2014/nha-epj-1.80/datatyper/basis" xmlns:person="http://eisi.helsedir.no/anno2014/nha-epj-1.80/datatyper/person" targetNamespace="http://eisi.helsedir.no/anno2014/nha-epj-1.80/datatyper/tiltak" elementFormDefault="qualified">
+	<xs:import namespace="http://eisi.helsedir.no/anno2014/nha-epj-1.80/datatyper/basis" schemaLocation="datatyper.basis.xsd"/>
+	<xs:import namespace="http://eisi.helsedir.no/anno2014/nha-epj-1.80/datatyper/person" schemaLocation="datatyper.person.xsd"/>
+	<xs:complexType name="Arkivert_R_BT">
+		<xs:sequence>
+			<xs:element name="besluttet_tiltak_komponent_ID" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="tiltaksbeskrivelse" type="xs:string" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="besluttet_tiltak_som_utføres">
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="tiltak:Arkivert_R_BT"/>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="arkivert_R_BT_elementverdi">
+		<xs:complexContent>
+			<xs:extension base="tiltak:Arkivert_R_BT"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="arkivert_R_TU_elementverdi">
+		<xs:complexContent>
+			<xs:extension base="tiltak:Arkivert_R_TU"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="arkivert_R_PAS_elementverdi">
+		<xs:complexContent>
+			<xs:extension base="tiltak:Arkivert_R_PAS"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Arkivert_R_PAS">
+		<xs:sequence>
+			<xs:element name="pasientens_komponent_ID" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="fullt_navn" type="xs:string" minOccurs="1" maxOccurs="1"/>
+			<xs:element ref="basis:pasientidentifikator" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Arkivert_R_TU">
+		<xs:sequence>
+			<xs:element name="tjenesteutførelse_komponent_ID" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element ref="tiltak:besluttet_tiltak_som_utføres" minOccurs="1" maxOccurs="1"/>
+			<xs:element ref="person:utførende_tjenesteyter" minOccurs="1" maxOccurs="1"/>
+			<xs:element ref="basis:status_gjennomføring_tiltak" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

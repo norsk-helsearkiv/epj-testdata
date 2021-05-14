@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://eisi.helsedir.no/anno2014/nha-epj-1.80/avleveringsdokumentasjon" xmlns:avleveringsdokumentasjon="http://eisi.helsedir.no/anno2014/nha-epj-1.80/avleveringsdokumentasjon" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://eisi.helsedir.no/anno2014/nha-epj-1.80/avleveringsdokumentasjon" elementFormDefault="qualified">
+	<xs:element name="Avleveringsdokumentasjon">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Oppdateringsinfo" type="avleveringsdokumentasjon:Oppdateringsinfo" minOccurs="1" maxOccurs="1"/>
+				<xs:element name="Avleveringsbeskrivelse" type="avleveringsdokumentasjon:Avleveringsbeskrivelse" minOccurs="1" maxOccurs="1"/>
+				<xs:element name="Overføring_til_arkivdepot" type="avleveringsdokumentasjon:Overføring_til_arkivdepot" minOccurs="0" maxOccurs="1"/>
+				<xs:element name="Avleveringsoversikt" type="avleveringsdokumentasjon:Avleveringsoversikt" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="Oppdateringsinfo">
+		<xs:sequence>
+			<xs:element name="sist_oppdatert" type="xs:dateTime" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="oppdatert_av" type="xs:string" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="prosesstrinn" type="xs:string" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Avleveringsbeskrivelse">
+		<xs:sequence>
+			<xs:element name="avtaleidentifikator" type="xs:string" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="avleveringsidentifikator" type="xs:string" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="arkivdepot_ID" type="xs:string" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="arkivskaper_ID" type="xs:string" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="arkiv_ID" type="xs:string" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="avtaledato" type="xs:date" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="dato_for_pasientutvelgelse" type="xs:date" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="planlagt_oppstart" type="xs:date" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="planlagt_avsluttet" type="xs:date" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="rotkatalog_arkivuttrekk" type="xs:string" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="utfyllende_opplysninger" type="xs:string" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Overføring_til_arkivdepot">
+		<xs:sequence>
+			<xs:element name="overført_dato" type="xs:date" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="antall_pasienter_overført" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="antall_sakstypebeskrivelser_overført" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="antall_dokumenttypebeskrivelser_overført" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Avleveringsoversikt">
+		<xs:sequence>
+			<xs:element name="pasient_ID" type="xs:string" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="pasient_ID_type" type="xs:string" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="arkiv_ID" type="xs:string" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="avleveringsidentifikator" type="xs:string" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="katalog_for_arkivuttrekk" type="xs:string" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="fødselsdato" type="xs:date" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="mors_dato" type="xs:date" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="uttrekkstidspunkt" type="xs:dateTime" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="kvalitetssikret_dato" type="xs:date" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="overført_dato" type="xs:date" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="kvittering_mottatt_dato" type="xs:date" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="status_fra_arkivdepot" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="tilbakemelding_fra_arkivdepot" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="dato_godtatt_av_arkivdepot" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="dato_forkastet_av_arkivdepot" type="xs:date" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="tidspunkt_slettet_fra_system" type="xs:dateTime" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="referanse_til_EPJ_i_system" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="leverandørspesifikk_referanse" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="Overført_til_ny_avlevering" type="avleveringsdokumentasjon:Overført_til_ny_avlevering" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Overført_til_ny_avlevering">
+		<xs:sequence>
+			<xs:element name="dato_overført_til_ny_avleveringsoversikt" type="xs:date" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="ny_avleveringsidentifikator" type="xs:string" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

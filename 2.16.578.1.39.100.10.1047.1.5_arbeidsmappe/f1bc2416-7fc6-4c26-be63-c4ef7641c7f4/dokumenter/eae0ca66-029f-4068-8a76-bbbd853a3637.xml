@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Arkivert_EPJ_dokument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns="http://eisi.helsedir.no/anno2014/nha-epj-1.80/epj_dokument">
+  <komponent_ID xmlns="http://eisi.helsedir.no/anno2014/nha-epj-1.80/datatyper/stamme">eae0ca66-029f-4068-8a76-bbbd853a3637</komponent_ID>
+  <komponenttype xmlns="http://eisi.helsedir.no/anno2014/nha-epj-1.80/datatyper/stamme">2.16.578.1.12.4.1.6.13.777304</komponenttype>
+  <Arkivert_revisjonsinfo>
+    <revisjonstidspunkt
+      xmlns="http://eisi.helsedir.no/anno2014/nha-epj-1.80/datatyper/revisjonsinfo"
+      >2021-03-02T17:15:34+01:00</revisjonstidspunkt>
+    <registrert_ved_revisjon
+      xmlns="http://eisi.helsedir.no/anno2014/nha-epj-1.80/datatyper/revisjonsinfo"
+      >1</registrert_ved_revisjon>
+    <merknad xmlns="http://eisi.helsedir.no/anno2014/nha-epj-1.80/datatyper/revisjonsinfo">?</merknad>
+    <revisjonstype xmlns="http://eisi.helsedir.no/anno2014/nha-epj-1.80/datatyper/basis">
+      <code>01</code>
+      <codeSystem>2.16.578.1.12.4.1.1.9252</codeSystem>
+      <originalText>Registrering av nytt innhold gjennom EPJs brukergrensesnitt</originalText>
+    </revisjonstype>
+    <registrert_av_tjenesteyter
+      xmlns="http://eisi.helsedir.no/anno2014/nha-epj-1.80/datatyper/person">
+      <tjenesteyter_komponent_ID>111</tjenesteyter_komponent_ID>
+      <fullt_navn>Minnie Mouse</fullt_navn>
+      <tjenesteyters_rolle>
+        <rolle_komponent_ID>111</rolle_komponent_ID>
+        <rollebeskrivelse>Sykepleier</rollebeskrivelse>
+      </tjenesteyters_rolle>
+    </registrert_av_tjenesteyter>
+    <signert_av_person xmlns="http://eisi.helsedir.no/anno2014/nha-epj-1.80/datatyper/person">
+      <fullt_navn>Minnie Mouse</fullt_navn>
+    </signert_av_person>
+  </Arkivert_revisjonsinfo>
+  <Arkivert_EPJ_fragment>
+    <komponent_ID xmlns="http://eisi.helsedir.no/anno2014/nha-epj-1.80/datatyper/stamme">eae0ca66-029f-4068-8a76-bbbd853a3637</komponent_ID>
+    <komponenttype xmlns="http://eisi.helsedir.no/anno2014/nha-epj-1.80/datatyper/stamme">2.16.578.1.12.4.1.6.13.777101</komponenttype>
+    <Arkivert_dataelement xmlns:q1="http://eisi.helsedir.no/anno2014/nha-epj-1.80/element/basisbruk"
+      xsi:type="q1:Arkivert_ELDOK_dataelement___elektronisk_dokument">
+      <komponent_ID xmlns="http://eisi.helsedir.no/anno2014/nha-epj-1.80/datatyper/stamme">eae0ca66-029f-4068-8a76-bbbd853a3637</komponent_ID>
+      <komponenttype xmlns="http://eisi.helsedir.no/anno2014/nha-epj-1.80/datatyper/stamme">2.16.578.1.12.4.1.6.13.777101</komponenttype>
+      <q1:format_dokumentinnhold>application/pdf</q1:format_dokumentinnhold>
+    </Arkivert_dataelement>
+  </Arkivert_EPJ_fragment>
+</Arkivert_EPJ_dokument>

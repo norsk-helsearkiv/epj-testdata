@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<epjpakkeliste xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns="http://schema.arkivverket.no/epjark/epjpakkeliste">
+  <AvleveringsID>2.16.578.1.39.100.10.1047.1.5</AvleveringsID>
+  <ansvarligPerson>Fetter Anton</ansvarligPerson>
+  <kontaktInformasjon>fetan@andeby.test</kontaktInformasjon>
+  <beskrivelseLagringsEnhet>NHx</beskrivelseLagringsEnhet>
+  <klarforOverforingDato>2020-02-03</klarforOverforingDato>
+  <pakke>
+    <pakketype>epj</pakketype>
+    <filReferanse>f1bc2416-7fc6-4c26-be63-c4ef7641c7f4.tar</filReferanse>
+    <pakketDato>2020-02-02</pakketDato>
+    <sjekksum>404be2cc0403067c4263edb7762a9f9888089d87a8a587411e4d8997ef69f5f5</sjekksum>
+  </pakke>
+  <pakke>
+    <pakketype>epj</pakketype>
+    <filReferanse>61af187c-d9a2-4555-a3c8-3f3c1c3a4b31.tar</filReferanse>
+    <pakketDato>2020-02-02</pakketDato>
+    <sjekksum>c1e87bf40c8f090ce923766d528bb751f7e8b45d706c868302c36799798762ca</sjekksum>
+  </pakke>
+  <pakke>
+    <pakketype>dok</pakketype>
+    <filReferanse>b5f2cfa0-0cf7-4c96-8638-7e576ec7ac04.tar</filReferanse>
+    <pakketDato>2020-02-02</pakketDato>
+    <sjekksum>6b23749d79d0136258e6e4b215da572f5b0ac6dd307cc5050355627d7f306bad</sjekksum>
+  </pakke>
+</epjpakkeliste>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Beskrivelse_arkivert_EPJ_dokumenttype xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+
+xmlns="http://eisi.helsedir.no/anno2014/nha-epj-1.80/uttrekksbeskrivelse" 
+xsi:schemaLocation="http://eisi.helsedir.no/anno2014/nha-epj-1.80/uttrekksbeskrivelse ../skjema/uttrekksbeskrivelse.xsd">
+
+	<komponenttype>2.16.578.1.12.4.1.6.13.777304</komponenttype><!-- Løpende journaldokument OID -->
+	<betegnelse_komponenttype>Løpende journaldokument fra Mitt EPJ-system</betegnelse_komponenttype>
+	<dokumentasjon>Uttrekk av et enkeltdokument fra den løpende journalen i Mitt EPJ-system som en pdf fil</dokumentasjon>
+	<Inkludert_arkivert_EPJ_fragmenttype>
+		<inkluder_komponenttype>2.16.578.1.12.4.1.6.12.777101</inkluder_komponenttype>
+		<minimum_antall>1</minimum_antall>
+		<maksimum_antall>1</maksimum_antall>
+		<Beskrivelse_arkivert_EPJ_fragmenttype>
+			<komponenttype>2.16.578.1.12.4.1.6.12.777101</komponenttype>
+			<betegnelse_komponenttype>PDF-fragment</betegnelse_komponenttype>
+			<dokumentasjon>Fragment som rommer et element med referanse til et pdf-dokument.</dokumentasjon>
+			<Inkludert_arkivert_dataelementtype>
+				<komponenttype>2.16.578.1.12.4.1.6.11.777101</komponenttype>
+				<betegnelse_komponenttype>Dataelement med referanse til et pdf-dokument</betegnelse_komponenttype>
+				<spesialisering_arkivert_dataelementtype>Arkivert ELDOK dataelement - elektronisk dokument</spesialisering_arkivert_dataelementtype>
+				<dokumentasjon>Dette dataelementet er til generell bruk i alle tilfeller hvor man refererer til et pdf-dokument.</dokumentasjon>
+				<minimum_antall>1</minimum_antall>
+				<maksimum_antall>1</maksimum_antall>
+			</Inkludert_arkivert_dataelementtype>
+		</Beskrivelse_arkivert_EPJ_fragmenttype>
+	</Inkludert_arkivert_EPJ_fragmenttype>
+	
+</Beskrivelse_arkivert_EPJ_dokumenttype>

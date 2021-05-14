@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://eisi.helsedir.no/anno2014/nha-epj-1.80/element/standard_xml" xmlns:standard_xml="http://eisi.helsedir.no/anno2014/nha-epj-1.80/element/standard_xml" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:stamme="http://eisi.helsedir.no/anno2014/nha-epj-1.80/datatyper/stamme" targetNamespace="http://eisi.helsedir.no/anno2014/nha-epj-1.80/element/standard_xml" elementFormDefault="qualified">
+	<xs:import namespace="http://eisi.helsedir.no/anno2014/nha-epj-1.80/datatyper/stamme" schemaLocation="datatyper.stamme.xsd"/>
+	<xs:complexType name="Arkivert_string_dataelement">
+		<xs:complexContent>
+			<xs:extension base="stamme:Arkivert_dataelement">
+				<xs:sequence>
+					<xs:element name="elementverdi" type="xs:string" minOccurs="0" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Arkivert_integer_dataelement">
+		<xs:complexContent>
+			<xs:extension base="stamme:Arkivert_dataelement">
+				<xs:sequence>
+					<xs:element name="elementverdi" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Arkivert_boolean_dataelement">
+		<xs:complexContent>
+			<xs:extension base="stamme:Arkivert_dataelement">
+				<xs:sequence>
+					<xs:element name="elementverdi" type="xs:boolean" minOccurs="0" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Arkivert_double_dataelement">
+		<xs:complexContent>
+			<xs:extension base="stamme:Arkivert_dataelement">
+				<xs:sequence>
+					<xs:element name="elementverdi" type="xs:double" minOccurs="0" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Arkivert_dateTime_dataelement">
+		<xs:complexContent>
+			<xs:extension base="stamme:Arkivert_dataelement">
+				<xs:sequence>
+					<xs:element name="elementverdi" type="xs:dateTime" minOccurs="0" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Arkivert_date_dataelement">
+		<xs:complexContent>
+			<xs:extension base="stamme:Arkivert_dataelement">
+				<xs:sequence>
+					<xs:element name="elementverdi" type="xs:date" minOccurs="0" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Arkivert_time_dataelement">
+		<xs:complexContent>
+			<xs:extension base="stamme:Arkivert_dataelement">
+				<xs:sequence>
+					<xs:element name="elementverdi" type="xs:time" minOccurs="0" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Arkivert_oid_dataelement">
+		<xs:complexContent>
+			<xs:extension base="stamme:Arkivert_dataelement">
+				<xs:sequence>
+					<xs:element name="elementverdi" type="xs:string" minOccurs="0" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

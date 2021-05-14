@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://eisi.helsedir.no/anno2014/nha-epj-1.80/element/personref" xmlns:personref="http://eisi.helsedir.no/anno2014/nha-epj-1.80/element/personref" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:person="http://eisi.helsedir.no/anno2014/nha-epj-1.80/datatyper/person" xmlns:stamme="http://eisi.helsedir.no/anno2014/nha-epj-1.80/datatyper/stamme" targetNamespace="http://eisi.helsedir.no/anno2014/nha-epj-1.80/element/personref" elementFormDefault="qualified">
+	<xs:import namespace="http://eisi.helsedir.no/anno2014/nha-epj-1.80/datatyper/person" schemaLocation="datatyper.person.xsd"/>
+	<xs:import namespace="http://eisi.helsedir.no/anno2014/nha-epj-1.80/datatyper/stamme" schemaLocation="datatyper.stamme.xsd"/>
+	<xs:complexType name="Arkivert_R_T_dataelement___tjenesteyter">
+		<xs:complexContent>
+			<xs:extension base="stamme:Arkivert_dataelement">
+				<xs:sequence>
+					<xs:element name="arkivert_R_T_elementverdi" type="person:arkivert_R_T_elementverdi" minOccurs="0" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Arkivert_R_R_dataelement___rolle">
+		<xs:complexContent>
+			<xs:extension base="stamme:Arkivert_dataelement">
+				<xs:sequence>
+					<xs:element name="arkivert_R_R_elementverdi" type="person:arkivert_R_R_elementverdi" minOccurs="0" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Arkivert_R_P_dataelement___person">
+		<xs:complexContent>
+			<xs:extension base="stamme:Arkivert_dataelement">
+				<xs:sequence>
+					<xs:element name="arkivert_R_P_elementverdi" type="person:arkivert_R_P_elementverdi" minOccurs="0" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

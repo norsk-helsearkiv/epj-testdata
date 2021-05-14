@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://eisi.helsedir.no/anno2014/nha-epj-1.80/element/grunndataref" xmlns:grunndataref="http://eisi.helsedir.no/anno2014/nha-epj-1.80/element/grunndataref" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:stamme="http://eisi.helsedir.no/anno2014/nha-epj-1.80/datatyper/stamme" xmlns:grunndata="http://eisi.helsedir.no/anno2014/nha-epj-1.80/datatyper/grunndata" targetNamespace="http://eisi.helsedir.no/anno2014/nha-epj-1.80/element/grunndataref" elementFormDefault="qualified">
+	<xs:import namespace="http://eisi.helsedir.no/anno2014/nha-epj-1.80/datatyper/stamme" schemaLocation="datatyper.stamme.xsd"/>
+	<xs:import namespace="http://eisi.helsedir.no/anno2014/nha-epj-1.80/datatyper/grunndata" schemaLocation="datatyper.grunndata.xsd"/>
+	<xs:complexType name="Arkivert_R_E_dataelement___organisatorisk_enhet">
+		<xs:complexContent>
+			<xs:extension base="stamme:Arkivert_dataelement"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Arkivert_R_V_dataelement___virksomhet">
+		<xs:complexContent>
+			<xs:extension base="stamme:Arkivert_dataelement">
+				<xs:sequence>
+					<xs:element name="arkivert_R_V_elementverdi" type="grunndata:arkivert_R_V_elementverdi" minOccurs="0" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Arkivert_R_SW_dataelement___programvare">
+		<xs:complexContent>
+			<xs:extension base="stamme:Arkivert_dataelement">
+				<xs:sequence>
+					<xs:element name="arkivert_R_SW_elementverdi" type="grunndata:arkivert_R_SW_elementverdi" minOccurs="0" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Arkivert_R_U_dataelement___medisinsk_teknisk_utstyr">
+		<xs:complexContent>
+			<xs:extension base="stamme:Arkivert_dataelement">
+				<xs:sequence>
+					<xs:element name="arkivert_R_U_elementverdi" type="grunndata:arkivert_R_U_elementverdi" minOccurs="0" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Arkivert_R_TELE_dataelement___teleadresse">
+		<xs:complexContent>
+			<xs:extension base="stamme:Arkivert_dataelement">
+				<xs:sequence>
+					<xs:element name="arkivert_R_TELE_elementverdi" type="grunndata:arkivert_R_TELE_elementverdi" minOccurs="0" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Arkivert_R_A_dataelement___adresse">
+		<xs:complexContent>
+			<xs:extension base="stamme:Arkivert_dataelement">
+				<xs:sequence>
+					<xs:element name="arkivert_R_A_elementverdi" type="grunndata:arkivert_R_A_elementverdi" minOccurs="0" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Arkivert_R_PADR_dataelement___postadresse">
+		<xs:complexContent>
+			<xs:extension base="stamme:Arkivert_dataelement">
+				<xs:sequence>
+					<xs:element name="arkivert_R_PADR_elementverdi" type="grunndata:arkivert_R_PADR_elementverdi" minOccurs="0" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Arkivert_R_SYS_dataelement___eksternt_system">
+		<xs:complexContent>
+			<xs:extension base="stamme:Arkivert_dataelement">
+				<xs:sequence>
+					<xs:element name="arkivert_R_SYS_elementverdi" type="grunndata:arkivert_R_SYS_elementverdi" minOccurs="0" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

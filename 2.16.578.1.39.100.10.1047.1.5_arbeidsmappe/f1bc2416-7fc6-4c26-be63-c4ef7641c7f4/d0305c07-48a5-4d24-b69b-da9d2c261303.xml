@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Pasientpersonalia xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns="http://eisi.helsedir.no/anno2014/nha-epj-1.80/pasientinfo">
+  <Arkivert_pasientinfo>
+    <pasient_ID>07064038054</pasient_ID>
+    <pasient_ID_type>FNR</pasient_ID_type>
+    <Arkivert_personnavn>
+      <fullt_navn>Daisy Duck</fullt_navn>
+    </Arkivert_personnavn>
+  </Arkivert_pasientinfo>
+</Pasientpersonalia>

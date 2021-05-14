@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Arkivert_EPJ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns="http://eisi.helsedir.no/anno2014/nha-epj-1.80/epj_sak">
+  <EPJ_ID>f1bc2416-7fc6-4c26-be63-c4ef7641c7f4</EPJ_ID>
+  <filreferanse_pasientinfo>../d0305c07-48a5-4d24-b69b-da9d2c261303.xml</filreferanse_pasientinfo>
+  <Arkivert_EPJ_sak>
+    <komponent_ID xmlns="http://eisi.helsedir.no/anno2014/nha-epj-1.80/datatyper/stamme">5fb04747-a34a-4fca-9856-88f9733b4978</komponent_ID>
+    <komponenttype xmlns="http://eisi.helsedir.no/anno2014/nha-epj-1.80/datatyper/stamme">2.16.578.1.12.4.1.6.13.777301</komponenttype>
+    <Referanse_arkivert_EPJ_dokument>
+      <komponent_ID>5fb04747-a34a-4fca-9856-88f9733b4978</komponent_ID>
+      <filreferanse>../dokumenter/5fb04747-a34a-4fca-9856-88f9733b4978.xml</filreferanse>
+    </Referanse_arkivert_EPJ_dokument>
+  </Arkivert_EPJ_sak>
+  <Arkivert_EPJ_sak>
+    <komponent_ID xmlns="http://eisi.helsedir.no/anno2014/nha-epj-1.80/datatyper/stamme">9b12d9d0-bd47-4c2e-b7ba-13892aadee71</komponent_ID>
+    <komponenttype xmlns="http://eisi.helsedir.no/anno2014/nha-epj-1.80/datatyper/stamme">2.16.578.1.12.4.1.6.13.777302</komponenttype>
+    <Referanse_arkivert_EPJ_dokument>
+      <komponent_ID>9b12d9d0-bd47-4c2e-b7ba-13892aadee71</komponent_ID>
+      <filreferanse>../dokumenter/9b12d9d0-bd47-4c2e-b7ba-13892aadee71.xml</filreferanse>
+    </Referanse_arkivert_EPJ_dokument>
+  </Arkivert_EPJ_sak>
+  <Arkivert_EPJ_sak>
+    <komponent_ID xmlns="http://eisi.helsedir.no/anno2014/nha-epj-1.80/datatyper/stamme">69c96b6f-c7a7-4eec-a1f7-0f86ab6177b7</komponent_ID>
+    <komponenttype xmlns="http://eisi.helsedir.no/anno2014/nha-epj-1.80/datatyper/stamme">2.16.578.1.12.4.1.6.13.777303</komponenttype>
+    <Referanse_arkivert_EPJ_dokument>
+      <komponent_ID>69c96b6f-c7a7-4eec-a1f7-0f86ab6177b7</komponent_ID>
+      <filreferanse>../dokumenter/69c96b6f-c7a7-4eec-a1f7-0f86ab6177b7.xml</filreferanse>
+    </Referanse_arkivert_EPJ_dokument>
+  </Arkivert_EPJ_sak>
+  <Arkivert_EPJ_sak>
+    <komponent_ID xmlns="http://eisi.helsedir.no/anno2014/nha-epj-1.80/datatyper/stamme">78ff9cb7-dff8-4de7-87b8-5b0b9120df40</komponent_ID>
+    <komponenttype xmlns="http://eisi.helsedir.no/anno2014/nha-epj-1.80/datatyper/stamme">2.16.578.1.12.4.1.6.13.777305</komponenttype>
+    <Referanse_arkivert_EPJ_dokument>
+      <komponent_ID>78ff9cb7-dff8-4de7-87b8-5b0b9120df40</komponent_ID>
+      <filreferanse>../dokumenter/78ff9cb7-dff8-4de7-87b8-5b0b9120df40.xml</filreferanse>
+    </Referanse_arkivert_EPJ_dokument>
+  </Arkivert_EPJ_sak>
+  <Arkivert_EPJ_sak>
+    <komponent_ID xmlns="http://eisi.helsedir.no/anno2014/nha-epj-1.80/datatyper/stamme">d55d68ac-71c9-4acd-9c54-ca10eae8c998</komponent_ID>
+    <komponenttype xmlns="http://eisi.helsedir.no/anno2014/nha-epj-1.80/datatyper/stamme">2.16.578.1.12.4.1.6.13.777306</komponenttype>
+    <Referanse_arkivert_EPJ_dokument>
+      <komponent_ID>d55d68ac-71c9-4acd-9c54-ca10eae8c998</komponent_ID>
+      <filreferanse>../dokumenter/d55d68ac-71c9-4acd-9c54-ca10eae8c998.xml</filreferanse>
+    </Referanse_arkivert_EPJ_dokument>
+  </Arkivert_EPJ_sak>
+  <Arkivert_EPJ_sak>
+    <komponent_ID xmlns="http://eisi.helsedir.no/anno2014/nha-epj-1.80/datatyper/stamme">eae0ca66-029f-4068-8a76-bbbd853a3637</komponent_ID>
+    <komponenttype xmlns="http://eisi.helsedir.no/anno2014/nha-epj-1.80/datatyper/stamme">2.16.578.1.12.4.1.6.13.777304</komponenttype>
+    <Referanse_arkivert_EPJ_dokument>
+      <komponent_ID>eae0ca66-029f-4068-8a76-bbbd853a3637</komponent_ID>
+      <filreferanse>../dokumenter/eae0ca66-029f-4068-8a76-bbbd853a3637.xml</filreferanse>
+    </Referanse_arkivert_EPJ_dokument>
+  </Arkivert_EPJ_sak>
+  <Arkivert_EPJ_sak>
+    <komponent_ID xmlns="http://eisi.helsedir.no/anno2014/nha-epj-1.80/datatyper/stamme">ff84edf0-6a19-4aa9-9116-5df2623866a1</komponent_ID>
+    <komponenttype xmlns="http://eisi.helsedir.no/anno2014/nha-epj-1.80/datatyper/stamme">2.16.578.1.12.4.1.6.13.777304</komponenttype>
+    <Referanse_arkivert_EPJ_dokument>
+      <komponent_ID>ff84edf0-6a19-4aa9-9116-5df2623866a1</komponent_ID>
+      <filreferanse>../dokumenter/ff84edf0-6a19-4aa9-9116-5df2623866a1.xml</filreferanse>
+    </Referanse_arkivert_EPJ_dokument>
+  </Arkivert_EPJ_sak>
+  <ansvarlig_virksomhet xmlns="http://eisi.helsedir.no/anno2014/nha-epj-1.80/datatyper/grunndata">
+    <virksomhet_komponent_ID>222</virksomhet_komponent_ID>
+    <enhetsbetegnelse>DIPS</enhetsbetegnelse>
+  </ansvarlig_virksomhet>
+  <ansvarlig_enhet xmlns="http://eisi.helsedir.no/anno2014/nha-epj-1.80/datatyper/grunndata">
+    <organisatorisk_enhet_komponent_ID>333</organisatorisk_enhet_komponent_ID>
+    <enhetsbetegnelse>Andeby Hospital</enhetsbetegnelse>
+  </ansvarlig_enhet>
+</Arkivert_EPJ>
