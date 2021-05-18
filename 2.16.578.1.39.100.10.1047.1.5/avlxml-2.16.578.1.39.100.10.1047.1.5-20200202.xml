@@ -5,9 +5,10 @@
     xmlns="http://www.arkivverket.no/standarder/nha/avlxml"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.arkivverket.no/standarder/nha/avlxml avlxml.xsd">
-    <avlxmlversjon>2.16.578.1.39.100.5.2.2</avlxmlversjon>
+    <avlxmlversjon>2.16.578.1.39.100.5.2.3</avlxmlversjon>
     <avleveringsidentifikator>2.16.578.1.39.100.10.1047.1.5</avleveringsidentifikator>
     <avleveringsbeskrivelse>Andeavdelingen</avleveringsbeskrivelse>
+    <generertdato>2021-05-18</generertdato>
     <arkivskaper>Andeby Hospital</arkivskaper>
     <avtale>
         <avtaleidentifikator>2.16.578.1.39.100.10.1047</avtaleidentifikator>
